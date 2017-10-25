@@ -1,0 +1,10 @@
+{% extends 'fbfeed/base.html' %}
+{% block content %}
+<div id="extra_padding">
+
+</div>
+{% for post in post_message %}
+<p>{{post}}</p>
+<hr>
+{% endfor %}
+{% endblock %}

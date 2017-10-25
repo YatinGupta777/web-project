@@ -1,0 +1,33 @@
+{% extends 'feed/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="centerstage">
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans">
+  <style>
+    body {
+      font-family: 'Open Sans', serif;
+      font-size: 15px;
+    }
+  </style>
+
+  {% for post in post_list %}
+  <div class="post">
+    <h1><a href="{% url 'feed:post_detail' pk=post.pk %}">{{post.event_name}}</a></h1>
+    <img id="post_img" src="http://127.0.0.1:8000/media/{{post.event_image}}" alt="IMG">
+
+    <h1><p>{{post.event_date}}</p></h1>
+    <h1><p>{{post.event_time}}</p></h1>
+    <h2><a href="maplink">Venue: {{post.event_venue}}</a></h2>
+    <p>Organized By: {{post.event_society}}</p>
+    <p>About: <br> {{post.event_description|safe|linebreaksbr}}</p>
+    <div class="date">
+      <p>Published On: {{post.published_date|date:"d-m-Y"}}</p>
+    </div>
+  </div>
+  {% endfor %}
+
+</div>
+{% endblock %}

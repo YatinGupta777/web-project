@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DTU FEED</title>
+    <!-- BOOTSTRAP -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Medium Style Editor     -->
+    <script src="//cdn.jsdelivr.net/medium-editor/latest/js/medium-editor.min.js"></script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/medium-editor/latest/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+  <link rel="stylesheet" href="{% static 'css/feed.css'%}">
+  <link rel="stylesheet" href="{% static 'css/polls.css'%}">
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <ul class="nav navbar-nav">
+        <li><a class="navbar-brand bigbrand" href="{% url 'feed:post_list' %}">DTU FEED
+          <img class="top" src="{% static 'images/navbarimages/feed.png'%}" alt="x" height="35" width="35" text-align="center"/>
+        </a></li>
+        <li><a href="#">Facebook feed
+          <div id="cf">
+            <img class="bottom" src="{% static 'images/navbarimages/fb.png'%}" alt="x" height=40 width=40 />
+            <img class="top" src="{% static 'images/navbarimages/fb-color.png'%}" alt="x" height=40 width=40/>
+        </div>
+        </a></li>
+        <li><a href="{% url 'feed:map'%}">Maps
+          <div id="cf">
+            <img class="bottom" src="{% static 'images/navbarimages/map.png'%}" alt="x" height=40 width=40 />
+            <img class="top" src="{% static 'images/navbarimages/map-color.png'%}" alt="x" height=40 width=40/>
+        </div></a></li>
+        <li><a href="{% url 'polls:index' %}">Voting Poll
+          <div id="cf">
+            <img class="bottom" src="{% static 'images/navbarimages/poll.png'%}" alt="x" height=40 width=40 />
+            <img class="top" src="{% static 'images/navbarimages/poll-color.png'%}" alt="x" height=40 width=40/>
+        </div></a></li>
+        <li><a href="#">Library
+          <div id="cf">
+            <img class="bottom" src="{% static 'images/navbarimages/lib.png'%}" alt="x" height=40 width=40 />
+            <img class="top" src="{% static 'images/navbarimages/lib-color.png'%}" alt="x" height=40 width=40/>
+        </div></a></li>
+        <li><a href="{% url 'feed:notes'%}">Notes
+          <div id="cf">
+            <img class="bottom" src="{% static 'images/navbarimages/notes.png'%}" alt="x" height=40 width=40 />
+            <img class="top" src="{% static 'images/navbarimages/notes-color.png'%}" alt="x" height=40 width=40/>
+        </div></a></li>
+        <li><a href="#">Teams
+          <div id="cf">
+            <img class="bottom" src="{% static 'images/navbarimages/teams.png'%}" alt="x" height=40 width=40 />
+            <img class="top" src="{% static 'images/navbarimages/teams-color.png'%}" alt="x" height=40 width=40/>
+        </div></a></li>
+        <li><a href="#">Discussion
+          <div id="cf">
+            <img class="bottom" src="{% static 'images/navbarimages/advice.png'%}" alt="x" height=40 width=40 />
+            <img class="top" src="{% static 'images/navbarimages/advice-color.png'%}" alt="x" height=40 width=40/>
+        </div></a></li>
+        <li><a href="#">Posters</a></li>
+        <li><a href="{% url 'feed:login' %}">LOGIN</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="{% url 'feed:post_new' %}">ADD</a></li>
+          <li><a href="{% url 'feed:login' %}"></a></li>
+        </ul>
+      </div>
+
+    </nav>
+    <div id="extra_padding">
+    </div>
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>

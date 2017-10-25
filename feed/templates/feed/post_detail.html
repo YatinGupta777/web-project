@@ -1,0 +1,18 @@
+{% extends "feed/base.html"%}
+{% load staticfiles %}
+{% block content%}
+<div>
+  <h1>DETAIL</h1>
+  <h1><a href="{% url 'feed:post_detail' pk=post.pk %}">{{post.event_name}}</a></h1>
+  <img src="http://127.0.0.1:8000/media/{{post.event_image}}" alt="IMG">
+  <p>Date:{{post.event_date}}</p>
+  <p>Time:{{post.event_time}}</p>
+  <p>Venue:{{post.event_venue}}</p>
+  <p>Society:{{post.event_society}}</p>
+  <p>Description:{{post.event_description|safe|linebreaksbr}}</p>
+  <div class="date">
+    <p>Published On:{{post.published_date|date:"d-m-Y"}}</p>
+  </div>
+</div>
+
+{% endblock %}
