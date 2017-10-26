@@ -65,11 +65,17 @@
         </div></a></li>
         <li><a href="#">Groups</a></li>
         <li><a href="#">Posters</a></li>
-        <li><a href="{% url 'feed:login' %}">LOGIN</a></li>
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'accounts:logout' %}">Logout</a></li>
+        {% else %}
+        <li><a href="{% url 'accounts:login_methods' %}">Login</a></li>
+        {% endif %}
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="{% url 'feed:post_new' %}">ADD</a></li>
-          <li><a href="{% url 'feed:login' %}"></a></li>
+          {% if user.is_authenticated %}
+          <li><a href="#">{{user.username}}</a></li>
+          {% endif %}
         </ul>
       </div>
 
