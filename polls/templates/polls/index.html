@@ -2,16 +2,6 @@
 {% load static %}
 
 {% block content %}
-
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Index</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/polls.css' %}" />
-  </head>
-
-  <body>
-
     {% if latest_question_list %}
         <ul>
         {% for question in latest_question_list %}
@@ -34,7 +24,5 @@
 
     <button type="button" name="button"><a href="{% url 'polls:create_choice' %}">Add Choice To Existing Poll</a></button>
     <button type="button" name="button"><a href="#">Create Poll</a></button>
-  </body>
-
-</html>
+  
 {% endblock %}

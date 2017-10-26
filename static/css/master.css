@@ -1,0 +1,97 @@
+#extra_padding{
+  padding-top: 6%;
+}
+.centerstage{
+  text-align: center;
+  background-color: #2B2B2B;
+}
+.post{
+  /*text-transform: uppercase;*/
+  border-style: solid;
+  width :60%;
+  margin-left: 20%;
+
+  background-color: #F6F6F6;
+  padding-top: 20px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+}
+
+h1 {
+  color: #111; font-family: 'Open Sans Condensed', sans-serif; font-size: 40px; font-weight: 600; line-height: 64px; margin: 0 0 0;  text-align: center; text-transform: uppercase;
+}
+
+#post_img{
+  width: 30%;
+  height: 30%;
+}
+
+
+/*@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+}*/
+
+#cf {
+  position:relative;
+  height:40px;
+  width:40px;
+  margin:0 auto;
+}
+
+#cf img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#cf img.top:hover {
+  opacity:0;
+}
+
+#cf img.bottom:default{
+  opacity:0;
+}
+
+#cf img.bottom:hover{
+  opacity:1;
+}
+
+p {
+  color: #111; font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 28px; margin: 0 0 12px;
+}
+
+h2 {
+  color: #111; font-family: 'Open Sans', sans-serif; font-size: 30px; font-weight: 300; line-height: 32px; margin: 0 0 12px; text-align: center;
+}
+
+.pub{
+
+}
