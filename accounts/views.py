@@ -15,7 +15,7 @@ def home(request):
    context = RequestContext(request,
                            {'request': request,
                             'user': request.user})
-   return render_to_response('feed/login.html',
+   return render_to_response('accounts/login_methods.html',
                              )
 #LOGIN AND LOGOUT VIEWS PRE DEFINED by from django.contrib.auth import views as auth_views
 #and directly used in urls.py

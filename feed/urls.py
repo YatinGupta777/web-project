@@ -11,10 +11,7 @@ urlpatterns = [
     url(r'^post/(?P<pk>\d+)$',views.PostDetailView.as_view(),name='post_detail'),
     url(r'^post/new/$',views.CreatePostView.as_view(),name ='post_new'),
     url(r'^post/(?P<pk>\d+)/publish/$',views.post_publish,name='post_publish'),
-    url(r'^login/',views.home, name='login'),
     url(r'^map/$',views.MapView.as_view(),name='map'),
-    
-
     url(r'^postAPI/$',views.PostList.as_view(),name="post_API"),
 ]
 

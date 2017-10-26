@@ -10,13 +10,6 @@ from rest_framework import status
 from .serializers import PostSerializer
 from django.http import HttpResponse
 
-def home(request):
-   context = RequestContext(request,
-                           {'request': request,
-                            'user': request.user})
-   return render_to_response('accounts/login_methods.html',
-                             )
-
 # Create your views here.
 class PostListView(ListView):
     context_object_name = 'post_list'
