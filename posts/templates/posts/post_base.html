@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/posts.css' %}">
+{% endblock %}
+
+{% block content%}
+<div class="">
+  <div class="container">
+    <div class="row">
+
+
+      <div id="padding">
+
+      </div>
+
+
+      {% block pre_post %}
+      {% endblock %}
+      {% block post_content %}
+      {% endblock %}
+      {% block post_post %}
+      {% endblock %}
+    </div>
+  </div>
+</div>
+{% endblock %}

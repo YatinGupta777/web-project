@@ -63,7 +63,7 @@
             <img class="bottom" src="{% static 'images/navbarimages/advice.png'%}" alt="x" height=40 width=40 />
             <img class="top" src="{% static 'images/navbarimages/advice-color.png'%}" alt="x" height=40 width=40/>
         </div></a></li>
-        <li><a href="#">Groups</a></li>
+        <li><a href="{% url 'groups:all' %}">Groups</a></li>
         <li><a href="#">Posters</a></li>
         {% if user.is_authenticated %}
         <li><a href="{% url 'accounts:logout' %}">Logout</a></li>

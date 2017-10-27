@@ -50,6 +50,8 @@ INSTALLED_APPS = [
     'discussion',
     'fbfeed',
     'accounts',
+    'groups',
+    'posts',
 ]
 
 MIDDLEWARE = [

@@ -20,15 +20,18 @@ from . import views
 
 urlpatterns = [
     url(r'',include('feed.urls')),
-    url(r'^polls/',include('polls.urls')),
-    url(r'^fbfeed/',include('fbfeed.urls')),
-    url(r'^discussion/',include('discussion.urls')),
+
     url(r'^admin/', admin.site.urls),
     url("^soc/", include("social_django.urls", namespace="social")),
     url(r'^accounts/',include('accounts.urls',namespace='accounts')),
     url(r'^accounts/',include('django.contrib.auth.urls')),
     url(r'^test/$',views.TestPage.as_view(),name="test"),
     url(r'^thanks/$',views.ThanksPage.as_view(),name='thanks'),
+    url(r'^polls/',include('polls.urls')),
+    url(r'^fbfeed/',include('fbfeed.urls')),
+    url(r'^discussion/',include('discussion.urls')),
+    url(r'^posts/',include('posts.urls',namespace='posts')),
+    url(r'^groups/',include('groups.urls',namespace='groups')),
 ]
 
 if settings.DEBUG:
