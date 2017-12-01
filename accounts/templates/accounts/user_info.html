@@ -1,0 +1,16 @@
+{% extends "accounts/accounts_base.html"%}
+{% load bootstrap3 %}
+{% block content %}
+<div id="buttons">
+
+{% if user.is_authenticated %}
+<h1>Welcome {{user.username}}</h1>
+<a href="{% url 'groups:create' %}" class="btn btn-md btn-fill btn-warning">
+<span>Create new Group</span></a>
+<a href="{% url 'posts:create' %}" class="btn btn-md btn-fill btn-default">Create Post</a>
+<a href="{% url 'posts:all' %}" class="btn btn-md btn-fill btn-primary">View Posts</a>
+
+{% endif %}
+</div>
+
+{% endblock %}

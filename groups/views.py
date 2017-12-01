@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.contrib import messages
+from django.db import IntegrityError
 # Create your views here.
 from django.contrib.auth.mixins import LoginRequiredMixin,PermissionRequiredMixin
 from django.core.urlresolvers import reverse

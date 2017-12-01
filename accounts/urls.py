@@ -11,4 +11,5 @@ urlpatterns = [
     url(r'logout/$',auth_views.LogoutView.as_view(),name='logout'),
     url(r'signup/$',views.Signup.as_view(),name='signup'),
     url(r'^login_methods/',views.home, name='login_methods'),
+    url(r'^user_info/$',views.UserInfo.as_view(),name='user_info'),
 ]
