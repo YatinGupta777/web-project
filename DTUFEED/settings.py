@@ -26,7 +26,7 @@ SECRET_KEY = 'cjutr1so=*wxduem3eo*z%04fn!bo(sm933)a9ir!uj2(plv3='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['safe-mountain-67355.herokuapp.com']
 
 ############################################
 
