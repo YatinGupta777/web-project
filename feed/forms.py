@@ -1,6 +1,9 @@
 from django import forms
 from feed.models import Post
+<<<<<<< HEAD
 
+=======
+>>>>>>> f10ea429a7d7cdc1bb79e79af7c7061dce5e451a
 from django.utils import timezone
 
 class PostForm(forms.ModelForm):
