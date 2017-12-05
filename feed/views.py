@@ -18,6 +18,13 @@ class PostListView(ListView):
     def get_queryset(self):
         return Post.objects.filter(event_date__gte=timezone.now()).order_by('event_date')
 
+    #def get_context_data(self,*args,**kwargs):
+    #    context = super(PostListView,self).get_context_data(*args,**kwargs)
+    #    qs =  Post.objects.filter(owner=self.get_object())
+    #    if qs.exists():
+    #        context['event_name'] = qs
+    #    return context
+
 class PostDetailView(DetailView):
         model = Post
 
