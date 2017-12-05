@@ -1,6 +1,5 @@
 from django import forms
 from feed.models import Post
-from simple_search import search_form_factory
 from django.utils import timezone
 
 class PostForm(forms.ModelForm):
@@ -20,8 +19,3 @@ class PostForm(forms.ModelForm):
         #widgets = {
         #    'event_description':forms.Textarea(attrs={'class':'editable medium-editor-textarea'})
         #}
-
-
-
-SearchForm = search_form_factory(Post.objects.all(),
-                                 ['event_name'])
