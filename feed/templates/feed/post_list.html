@@ -15,7 +15,7 @@
   </style>
 
   {% for post in post_list %}
-  AAAA
+
   <div class="post">
     <h1><a href="{% url 'feed:post_detail' pk=post.pk %}">{{post.event_name}}</a></h1>
     <img id="post_img" src="http://127.0.0.1:8000/media/{{post.event_image}}" alt="IMG">
