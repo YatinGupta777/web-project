@@ -151,7 +151,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS =[
     STATIC_DIR_FEED,#STATIC_DIR_DISCUSSION,
 ]
-#STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
 LOGIN_REDIRECT_URL = '/'
 
 
@@ -168,11 +168,3 @@ LOGIN_REDIRECT_URL = 'test'
 LOGOUT_REDIRECT_URL ='thanks'
 
 INTERNAL_IPS = ['127.0.0.1']
-
-#SECRET_KEY = config('SECRET_KEY')
-#DEBUG = config('DEBUG', default=False, cast=bool)
-#DATABASES = {
-#    'default': dj_database_url.config(
-#        default=config('DATABASE_URL')
-#    )
-#}
