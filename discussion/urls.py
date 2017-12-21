@@ -4,5 +4,5 @@ from . import views
 
 app_name = 'discussion'
 urlpatterns = [
-    url(r'^$', views.IndexView.as_view(), name='index'),
+    url(r'^Advices/$',views.AdvicesView.as_view(),name="advices"),
 ]

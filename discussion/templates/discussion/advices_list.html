@@ -1,0 +1,12 @@
+{% extends 'feed/feed_base.html'%}
+
+{% load staticfiles %}
+
+{% block content %}
+<div class="container">
+{% for advice in advices_list %}
+      <h2>{{advice.title}}</a></h2>
+        <p>{{advice.text}}</p>
+{% endfor %}
+</div>
+{% endblock %}

@@ -1,6 +1,9 @@
 from django.db import models
 
 # Create your models here.
-#class SeniorAdvices(models.Model):
-#    title = model.CharField(max_length=100)
-#    text = model.CharField()
+class Advices(models.Model):
+    title = models.CharField(max_length=100)
+    text = models.CharField(max_length=5000)
+
+    def __str__(self):
+        return self.title

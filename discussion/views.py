@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
-
+from django.views.generic import TemplateView,ListView,DetailView
+from discussion.models import *
 # Create your views here.
-class IndexView(TemplateView):
-    template_name = 'discussion/index.html'
+class AdvicesView(ListView):
+    context_object_name = 'advices_list'
+    model = Advices
